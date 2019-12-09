@@ -11,7 +11,7 @@ public:
 	Node(){}; //default so we can create empty nodes...
 	~Node() { std::cout << "Node Deleted" << std::endl; }
 
-	int intData = NULL;
+	int data = NULL;
 
 	Node* next = NULL;
 };

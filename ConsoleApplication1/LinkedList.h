@@ -1,6 +1,6 @@
 #pragma once
 #include "Node.h"
-//#include <iostream>
+#include <iostream>
 
 class LinkedList
 {
@@ -15,17 +15,27 @@ public:
 
 	int listLength = 0;
 
-	void AddNode(int data);
-
-	void RemoveNode(Node* node);
+	void AddNode(int);
+	void RemoveNode(Node*);
 	void PrintList();
-
 	void IterateList();
 	void PrintNodes();
 
-	Node* FindNode(int data);
+	Node* FindNode(int);
 	int FindMax();
 	int FindMin();
 
+	void SelectionSort();
+	void BubbleSort();
+	void InsertionSort();
+	void MergeSort(Node**);
+	void QuickSort();
+
+private:
+
+	Node* mSplit(Node*, Node*, Node**, Node**);
+	Node* mQuickSort(Node*, Node*);
+	Node* mGetEndNode(Node*);
+	Node* mMerge(Node*, Node*);
 };
 
